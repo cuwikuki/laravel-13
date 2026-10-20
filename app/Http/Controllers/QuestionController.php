@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -27,11 +26,25 @@ class QuestionController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request->all());
+        $data = [
+            'nama'       => $request->nama,
+            'email'      => $request->email,
+            'pertanyaan' => $request->pertanyaan,
+        ];
 
-        $data['nama']         = $request->nama;
-        $data['email']        = $request->email;
-        $data['pertanyaan']   = $request->pertanyaan;
+        session()->put('data_pertanyaan', $data);
+        session()->flash('info', 'Data Berhasil Dimasukkan !');
+
+        return redirect('/home');
+    }
+
+    public function respon()
+    {
+        $data = session('data_pertanyaan');
+
+        if (! $data) {
+            return redirect('/home');
+        }
 
         return view('home-question-respon', $data);
     }
