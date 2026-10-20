@@ -382,7 +382,7 @@
                                     <!-- Birthday -->
                                     <div class="mb-3">
                                         <label for="birthday" class="form-label">Birthday</label>
-                                        <input type="date" id="birthday" class="form-control" name="bithday">
+                                        <input type="date" id="birthday" class="form-control" name="birthday">
                                     </div>
 
                                     <!-- Gender -->
