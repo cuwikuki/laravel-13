@@ -72,7 +72,7 @@
     <script src="{{ asset('assets-admin/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 
     <!-- Volt JS -->
-    @include('layouts.admin.footer')
+    @include('layouts.admin.js')
     {{-- End JS --}}
 
 </body>

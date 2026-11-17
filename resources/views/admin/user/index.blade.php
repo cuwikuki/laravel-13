@@ -54,7 +54,7 @@
                                             <td>{{ $item->email }}</td>
                                             <td>{{ $item->password }}</td>
 
-                                            <td><a href="{{ route('user.edit', $item->user_id) }}"
+                                            <td><a href="{{ route('user.edit', $item->id) }}"
                                                     class="btn btn-info btn-sm">
                                                     <svg class="icon icon-xs me-2" data-slot="icon" fill="none"
                                                         stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24"
